@@ -1,0 +1,15 @@
+[meta]
+    title = "Simple Python Script Suite"
+
+[scheduling]
+    [[dependencies]]
+        graph = "run_python_script"
+
+[runtime]
+    [[root]]
+        # Standard settings for all tasks
+        pre-script = "echo 'Starting task...'"
+
+    [[run_python_script]]
+        # Because the script is in bin/, we just call it by name
+        script = "myfile.py"
