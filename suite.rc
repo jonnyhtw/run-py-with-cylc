@@ -1,15 +1,13 @@
 [meta]
-    title = "Simple Python Script Suite"
+    title = "Cylc 7 Hello World for ARCHER2"
 
 [scheduling]
     [[dependencies]]
-        graph = "run_python_script"
+        graph = "hello"
 
 [runtime]
-    [[root]]
-        # Standard settings for all tasks
-        pre-script = "echo 'Starting task...'"
-
-    [[run_python_script]]
-        # Because the script is in bin/, we just call it by name
-        script = "myfile.py"
+    [[hello]]
+        script = "sleep 10; echo Hello World!"
+        
+        [[[remote]]]
+            host = localhost
