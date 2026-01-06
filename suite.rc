@@ -1,13 +1,11 @@
 [meta]
-    title = "Cylc 7 Hello World for ARCHER2"
+    title = "Simple Cylc 7 Python script on PUMA2."
 
 [scheduling]
     [[dependencies]]
-        graph = "hello"
+        graph = "run_py"
 
 [runtime]
-    [[hello]]
-        script = "sleep 10; echo Hello World!"
+    [[run_py]]
+        script = "sleep 10 ; myfile.py"
         
-        [[[remote]]]
-            host = localhost
